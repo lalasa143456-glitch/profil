@@ -1,0 +1,152 @@
+/**/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fdf8d5;
+    font-family: "Times New Roman", Times, serif;
+    color: #1e293b;
+    padding: 15px 10px 40px 10px;
+}
+
+/*bagian navigasi atas dan header*/
+.nav-atas {
+    text-align: center;
+    padding: 5px 0 12px 0;
+    font-size: 16px;
+}
+
+.nav-atas a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.nav-atas a:visited {
+    color: purple;
+}
+
+.garis-pembatas {
+    border: 0;
+    border-top: 1px solid #999;
+    margin-bottom: 20px;
+}
+
+.judul-halaman {
+    text-align: center;
+    color: #f2a9b8;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+/*flexbox wrapper*/
+.wrapper {
+    max-width: 1000px;
+    margin: 30px auto 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/*container atas flexbox (2 kolom)*/
+.container-atas {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f4b6c2;
+    padding: 30px;
+    gap: 35px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+.konten-tengah {
+    flex: 2 1 380px; /* Mengambil porsi 2 bagian (lebih lebar) */
+}
+
+.sidebar-kanan {
+    flex: 1 1 240px; /* Mengambil porsi 1 bagian */
+}
+
+.container-atas h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.container-atas h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.container-atas p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/*container bawah flexbox (3 kolom)*/
+.container-bawah {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.kotak-layanan {
+    flex: 1 1 280px;
+    padding: 28px 24px;
+    min-height: 220px;
+}
+
+.kotak-layanan h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.kotak-layanan p {
+    font-size: 14px;
+    color: #222;
+}
+
+.warna-1 {
+    background-color: #b5a8f5;
+}
+
+.warna-2 {
+    background-color: #fdd8cc;
+}
+
+.warna-3 {
+    background-color: #b5a8f5;
+}
+
+/*responsif*/
+@media (max-width: 768px) {
+    .judul-halaman {
+        font-size: 24px;
+    }
+
+    .container-atas {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .konten-tengah {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        padding-bottom: 15px;
+    }
+
+    .container-bawah {
+        flex-direction: column;
+    }
+
+    .kotak-layanan {
+        min-height: auto;
+        padding: 20px;
+    }
+}
